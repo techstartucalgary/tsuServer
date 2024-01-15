@@ -23,6 +23,6 @@ app.get('/API', (req, res) => {
 const galleryRouter = require("./routes/gallery")
 
 // link the routes
-app.use("API/gallery", galleryRouter)
+app.use("/API/gallery", galleryRouter)
 
 module.exports = app; // CommonJS syntax to export
