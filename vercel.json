@@ -1,5 +1,4 @@
 {
-    "_comment": "// specifies our rewrites: every request that comes into our API needs to be redirected to index.ts for App to handle",
     "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
   }
 
