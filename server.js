@@ -23,3 +23,4 @@ const galleryRouter = require("./routes/gallery")
 // link the routes
 app.use("/gallery", galleryRouter)
 
+module.exports = app; // CommonJS syntax to export
