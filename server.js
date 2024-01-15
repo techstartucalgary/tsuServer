@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express(); // setup up the server
-const port = 5000;
+const port = process.env.PORT || 5000;
 const cors = require('cors');
 
 //solve cors issue when tsu website connects
