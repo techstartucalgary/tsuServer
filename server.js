@@ -20,9 +20,9 @@ app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 }
 )
-//Vercel rewrites all incoming requests to the "/API" 
+//Vercel rewrites all incoming requests to the "/api" 
 //To make these routes accessible through the Vercel deployment, they need to match the rewritten paths. 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send("server is up and running")
     console.log('server is up and running!');
 })
@@ -31,6 +31,6 @@ app.get('/', (req, res) => {
 const galleryRouter = require("./routes/gallery")
 
 // link the routes
-app.use("/gallery", galleryRouter)
+app.use("/api", galleryRouter)
 
 module.exports = app; // CommonJS syntax to export

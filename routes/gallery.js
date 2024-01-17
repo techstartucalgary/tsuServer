@@ -3,7 +3,7 @@ const router = Router();
 const axios = require('axios');
 
 
-router.get("/", async (req, res) => {
+router.get("/gallery", async (req, res) => {
     console.log("Connected to TechStart Gallery");
 
     try {
