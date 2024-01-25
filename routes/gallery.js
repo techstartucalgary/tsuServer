@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const axios = require("axios");
+require('dotenv').config();
 
 router.get("/gallery", async (req, res) => {
   console.log("Connected to TechStart Gallery");
@@ -19,8 +20,7 @@ router.get("/gallery", async (req, res) => {
 
 const retrieveAlbum = async () => {
   //url is for pitch night videos and footage
-  const response = await axios.get(
-    `https://photos.app.goo.gl/SkVei5N56poqTh8g8`,
+  const response = await axios.get(process.env.GOOGLE_PHOTOS_URL,
     { responseType: "text" }
   );
   return response.data;
