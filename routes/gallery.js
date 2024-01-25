@@ -29,7 +29,6 @@ const retrieveAlbum = async () => {
 function extractPhotos(content) {
   // Use a regex pattern to match URLs with "/pw/"
   // use to get rid of the set width and height.
-  // const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)(?![?&]w=\d+&h=\d+)["']/g;
   const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g;
 
   const links = new Set();
@@ -44,6 +43,3 @@ function extractPhotos(content) {
 }
 
 module.exports = router;
-// rachout to ben and waika about hosting it on github
-//reachout to brian about deploying on vercel.
-// once its has been integrated, style it

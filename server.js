@@ -3,7 +3,7 @@ const app = express(); // setup up the server
 const port = process.env.PORT || 3001;
 const cors = require("cors");
 
-//solve cors issue when tsu website connects
+//solve cors issue
 app.use(cors());
 
 // run the server
