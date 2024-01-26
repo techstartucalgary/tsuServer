@@ -21,7 +21,7 @@ router.get("/gallery", async (req, res) => {
 const retrieveAlbum = async () => {
   try {
     // URL for the Google Photos album
-    const albumUrl = "https://photos.app.goo.gl/SkVei5N56poqTh8g8";
+    const albumUrl =process.env.GOOGLE_PHOTOS_URL;
     
     // Make the request to Google Photos
     const response = await axios.get(albumUrl, { responseType: "text" });
