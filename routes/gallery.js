@@ -4,11 +4,13 @@ const axios = require("axios");
 require('dotenv').config();
 
 router.get("/gallery", async (req, res) => {
-  console.log("Connected to TechStart Gallery");
+  //show the orign of the request
+  console.log("client IP: ",  req.ip, ", connects to TechStart server");
 
   try {
     const data = await retrieveAlbum();
     const links = extractPhotos(data);
+    console.log(`Successfully retrieved ${links.length} photos from the album.`);
     res.json(links);
   } catch (error) {
     console.error("Error fetching and extracting photos:", error);
@@ -17,10 +19,23 @@ router.get("/gallery", async (req, res) => {
 });
 
 const retrieveAlbum = async () => {
-  const response = await axios.get(process.env.GOOGLE_PHOTOS_URL,
-    { responseType: "text" }
-  );
-  return response.data;
+  try {
+    // URL for the Google Photos album
+    const albumUrl = "https://photos.app.goo.gl/SkVei5N56poqTh8g8";
+    
+    // Make the request to Google Photos
+    const response = await axios.get(albumUrl, { responseType: "text" });
+    
+    // Check if the response contains data
+    if (response && response.data) {
+      return response.data;
+    } else {
+      throw new Error("Google Photos API response did not contain data.");
+    }
+  } catch (error) {
+    console.error("Error fetching album:", error);
+    throw new Error("Error fetching album");
+  }
 };
 
 function extractPhotos(content) {
