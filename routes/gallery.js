@@ -8,9 +8,7 @@ router.get("/gallery", async (req, res) => {
 
   try {
     const data = await retrieveAlbum();
-    // console.log(data);
     const links = extractPhotos(data);
-    // console.log(links)
     res.json(links);
   } catch (error) {
     console.error("Error fetching and extracting photos:", error);
@@ -19,7 +17,6 @@ router.get("/gallery", async (req, res) => {
 });
 
 const retrieveAlbum = async () => {
-  //url is for pitch night videos and footage
   const response = await axios.get(process.env.GOOGLE_PHOTOS_URL,
     { responseType: "text" }
   );
@@ -27,11 +24,11 @@ const retrieveAlbum = async () => {
 };
 
 function extractPhotos(content) {
-  // Use a regex pattern to match URLs with "/pw/"
-  // use to get rid of the set width and height.
-  const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g;
 
-  const links = new Set();
+  // Regular expression to match Google Photos URLs
+  const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g; 
+
+  const links = new Set();// Create a new Set to store unique photo links
   let match;
   while ((match = regex.exec(content))) {
     if (!match[1].includes("=w")) {
