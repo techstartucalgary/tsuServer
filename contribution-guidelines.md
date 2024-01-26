@@ -3,16 +3,16 @@
 - [Contribution Guidelines](#contribution-guidelines)
   - [👩‍⚖️ Admins](#️-admins)
   - [👩‍💻Active Contributors](#active-contributors)
-  - [🌟Getting Started](#getting-started)
-  - [🧪 How to Build, Test, and Run](#-how-to-build-test-and-run)
-    - [`npm start`](#npm-start)
-    - [`npm test`](#npm-test)
-    - [`npm run build`](#npm-run-build)
-    - [`npm run eject`](#npm-run-eject)
-  - [💻 Guidelines for Code Contributions](#-guidelines-for-code-contributions)
-  - [🎨 Guidelines for Non-Code Contributions](#-guidelines-for-non-code-contributions)
-  - [📃Code of Conduct](#code-of-conduct)
-  - [📩Contact Us](#contact-us)
+  - [🌟Getting Started]
+  - [🧪 How to Build, Test, and Run]
+    - [`npm run start`]
+    - [`npm test`]
+    - [`npm run build`]
+    - [`npm run eject`]
+  - [💻 Guidelines for Code Contributions]
+  - [🎨 Guidelines for Non-Code Contributions]
+  - [📃Code of Conduct]
+  - [📩Contact Us]
 
 Thank you for your interest in contributing to the Tech Start UCalgary server repository! We welcome any and all contributions to improve our website and make it a better resource for our community. Before making a contribution, please read and follow these guidelines to ensure that your changes are appropriate and contribute to our goals.
 
@@ -42,7 +42,7 @@ There are several types of contributions that you can make to this repository:
 - **New features:** If you have an idea for a new feature or functionality that would be useful to our community, please submit your proposal and any relevant code changes.
 
 <details>
-  <summary>## 🌟Getting Started </summary>
+  <summary>🌟Getting Started </summary>
 
 To get started contributing to the Tech Start UCalgary express server, please follow these steps:
 
@@ -89,3 +89,58 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 </details>
+
+<details>
+<summary>npm run build </summary>
+</details>
+
+<details>
+<summary>npm run eject</summary>
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (`webpack`, `Babel`, `ESLint`, etc.) right into your project so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts, so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+</details>
+
+<details>
+<summary>💻 Guidelines for Code Contributions </summary>
+
+When making code contributions to the Tech Start UCalgary server, please follow these guidelines:
+
+- Write clear, concise code that is easy to understand and maintain.
+- Use descriptive variable and function names.
+- Test your code thoroughly before submitting it.
+- Follow existing coding standards and conventions.
+- Avoid making changes that are not related to your contribution.
+</details>
+
+<details>
+<summary>🎨 Guidelines for Non-Code Contributions</summary>
+
+If you are making non-code contributions to the Tech Start UCalgary server, such as design or content updates, please follow these guidelines:
+
+- Provide clear and detailed descriptions of your changes.
+- Include any relevant images or files.
+- Follow existing design and content standards and conventions.
+- Avoid making changes that are not related to your contribution.
+</details>
+
+<details>
+<summary>📃Code of Conduct </summary>
+
+Please note that all contributors are expected to adhere to the [Tech Start UCalgary Code of Conduct](CODE_OF_CONDUCT.md)
+
+</details>
+
+<details>
+<summary>📩Contact Us</summary>
+
+If you have any questions or concerns about contributing to the Tech Start UCalgary server repository, please contact us at info@techstartucalgary.com.
+
+</details>
+
+Thank you for your contributions to our community! 👐
