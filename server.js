@@ -19,8 +19,11 @@ app.get("/api", (req, res) => {
 
 // import the routes
 const galleryRouter = require("./routes/gallery");
+const merchGalleryRouter = require("./routes/merchgallery");
 
 // link the routes
 app.use("/api", galleryRouter);
+app.use("/api", merchGalleryRouter);
+
 
 module.exports = app; // CommonJS syntax to export
