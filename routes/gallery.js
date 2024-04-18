@@ -5,7 +5,7 @@ require('dotenv').config();
 
 router.get("/gallery", async (req, res) => {
   //show the orign of the request
-  console.log("client IP: ",  req.ip, ", connects to TechStart server");
+  //console.log("client IP: ",  req.ip, ", connects to TechStart server");
 
   try {
     const data = await retrieveAlbum();
@@ -21,7 +21,7 @@ router.get("/gallery", async (req, res) => {
 const retrieveAlbum = async () => {
   try {
     // URL for the Google Photos album
-    const albumUrl =process.env.GOOGLE_PHOTOS_URL;
+    const albumUrl = process.env.GOOGLE_PHOTOS_URL;
     
     // Make the request to Google Photos
     const response = await axios.get(albumUrl, { responseType: "text" });
