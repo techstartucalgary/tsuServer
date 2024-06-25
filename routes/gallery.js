@@ -5,7 +5,7 @@ require('dotenv').config();
 
 router.get("/gallery", async (req, res) => {
   //show the orign of the request
-  console.log("client IP: ",  req.ip, ", connects to TechStart server");
+  console.log("client IP: ", req.ip, ", connects to TechStart server");
 
   try {
     const data = await retrieveAlbum();
@@ -21,11 +21,11 @@ router.get("/gallery", async (req, res) => {
 const retrieveAlbum = async () => {
   try {
     // URL for the Google Photos album
-    const albumUrl =process.env.GOOGLE_PHOTOS_URL;
-    
+    const albumUrl = process.env.GOOGLE_PHOTOS_URL;
+
     // Make the request to Google Photos
     const response = await axios.get(albumUrl, { responseType: "text" });
-    
+
     // Check if the response contains data
     if (response && response.data) {
       return response.data;
@@ -41,12 +41,12 @@ const retrieveAlbum = async () => {
 function extractPhotos(content) {
 
   // Regular expression to match Google Photos URLs
-  const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g; 
+  const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g;
 
   const links = new Set();// Create a new Set to store unique photo links
   let match;
   while ((match = regex.exec(content))) {
-    if (!match[1].includes("=w")) {
+    if (!match[1].includes("=w") && !match[1].includes("=s")) {
       //don't include links with a set width and height
       links.add(match[1]);
     }
